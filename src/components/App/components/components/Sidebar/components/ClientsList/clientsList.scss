@@ -1,0 +1,10 @@
+.list-of-clients {
+    overflow-y:auto;
+    height: calc(100vh - 143px);
+
+    .no-results {
+        padding: 15px 10px;
+        font-size: 30px;
+        color: #935cff;
+    }
+}

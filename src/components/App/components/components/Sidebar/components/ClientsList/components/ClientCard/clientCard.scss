@@ -1,0 +1,39 @@
+.client-card {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px transparent;
+    box-sizing: border-box;
+
+    &:hover {
+        background-color: #935cff;
+        cursor: pointer;
+    }
+
+    &.active {
+        border: 1px solid #935cff;
+    }
+
+    .client-photo {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .client-info {
+        padding: 5px 10px;
+
+        .client-info__name {
+            padding-bottom: 5px;
+            font-size: 18px;
+            font-family: 'Dancing Script', cursive;
+            font-weight: bold;
+        }
+    }
+}
