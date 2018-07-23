@@ -2,7 +2,7 @@ import { fetchClients } from 'Redux/actionCreators';
 
 import filterClientsMiddleware from 'Redux/middlewares/filterClientsMiddleware';
 
-import mockClients from '../../assests/mockups/clients';
+import mockClients from '../../assets/mockups/clients';
 
 const fetchClientsMiddleware = () => dispatch => {
 

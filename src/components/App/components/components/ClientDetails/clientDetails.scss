@@ -1,0 +1,31 @@
+.client-details {
+    margin: 30px;
+    width: 60%;
+    display: flex;
+
+    .client-photo {
+        padding: 30px;
+
+        img {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+
+    .client-info {
+        padding: 30px;
+        font-size: 20px;
+
+        p {
+            padding-bottom: 30px;
+        }
+        .marked {
+            font-weight: bold;
+        }
+
+        &__name {
+            font-family: 'Dancing Script', cursive;
+        }
+
+    }
+}

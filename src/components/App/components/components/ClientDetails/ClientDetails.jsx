@@ -1,4 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+import getClientInfo from 'Redux/selectors/getClientInfo';
 
 import './clientDetails.scss';
 
@@ -40,4 +44,26 @@ const ClientDetails = props => {
     );
 }
 
-export default ClientDetails;
+ClientDetails.propTypes = {
+    info: PropTypes.shape({
+        zipCode: PropTypes.string.isRequired,
+        country: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        street: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        phone: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        city: PropTypes.string.isRequired,
+        job: PropTypes.string.isRequired
+    }).isRequired
+};
+
+const mapStateToProps = state => {
+    const { id } = state.selectedClient;
+
+    return {
+        info: getClientInfo(state.clients, id)
+    };
+};
+
+export default connect(mapStateToProps)(ClientDetails);

@@ -18,7 +18,7 @@ const webpackConfig = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Test',
+            title: 'Clients Database',
             template: 'src/assets/templates/index.html'
         }),
         new HtmlBeautifyPlugin({
