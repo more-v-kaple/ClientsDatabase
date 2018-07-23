@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import './main.scss';
 
@@ -21,4 +23,14 @@ const Main = props => {
     );
 }
 
-export default Main;
+Main.propTypes = {
+    id: PropTypes.string
+};
+
+const mapStateToProps = state => (
+    {
+        id: state.selectedClient.id
+    }
+);
+
+export default connect(mapStateToProps)(Main);
