@@ -20,7 +20,7 @@ class ClientsList extends Component {
     handleClick = e => {
         const client = e.target.closest('div.client-card'),
             { selectClient } = this.props,
-            id = client? client.dataset.id : null;
+            id = client ? client.dataset.id : null;
 
         id && selectClient(id);
     }
@@ -44,7 +44,9 @@ class ClientsList extends Component {
                             />
                         </li>
                     ))
-                    : <li className="no-results"> No results found...</li>
+                    : <li className="no-results">
+                        No results found...
+                    </li>
                 }
             </ul>
         );
