@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './clientCard.scss';
 
@@ -24,12 +25,22 @@ const ClientCard = props => {
                     className = "client-info__name">
                     { name }
                 </p>
-                <p> { job } </p>
+                <p>
+                    { job }
+                </p>
             </div>
-
-
         </div>
     );
 }
+
+ClientCard.propTypes = {
+    selectedId: PropTypes.string.isRequired,
+    info: PropTypes.shape({
+        avatar: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        job: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired
+    }).isRequired
+};
 
 export default ClientCard;
