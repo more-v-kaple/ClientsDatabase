@@ -5,7 +5,7 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 const path = require('path');
 
-const buildPath = '../dist';
+const buildPath = '../build';
 
 const webpackConfig = {
     entry: {

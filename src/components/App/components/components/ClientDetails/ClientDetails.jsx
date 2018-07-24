@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import getClientInfo from 'Redux/selectors/getClientInfo';
+import getClientInfoSelector from 'Redux/selectors';
 
 import './clientDetails.scss';
 
@@ -59,10 +59,9 @@ ClientDetails.propTypes = {
 };
 
 const mapStateToProps = state => {
-    const { id } = state.selectedClient;
 
     return {
-        info: getClientInfo(state.clients, id)
+        info: getClientInfoSelector(state)
     };
 };
 

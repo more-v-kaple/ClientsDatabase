@@ -63,8 +63,7 @@
     "moduleNameMapper": {
       "^Redux/(.*)": "<rootDir>/src/redux/$1",
       "^Components/(.*)": "<rootDir>/src/components/$1",
-      "^Utils/(.*)": "<rootDir>/src/utils/$1",
-      "^Constants(.*)": "<rootDir>/src/constants/$1"
+      "^Utils/(.*)": "<rootDir>/src/utils/$1"
     }
   }
 }
