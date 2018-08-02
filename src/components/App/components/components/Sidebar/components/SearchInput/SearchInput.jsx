@@ -9,6 +9,7 @@ import Input from './components/Input';
 const initialState = {
     value: ''
 };
+
 class SearchInput extends Component {
     constructor (props) {
         super(props);

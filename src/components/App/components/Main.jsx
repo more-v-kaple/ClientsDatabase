@@ -4,18 +4,20 @@ import { connect } from 'react-redux';
 
 import './main.scss';
 
+import { getIsSelectedClient } from 'Redux/selectors';
+
 import ClientDetails from './components/ClientDetails';
 import NoClient from './components/NoClient';
 import Sidebar from './components/Sidebar';
 
 const Main = props => {
-    const { id } = props;
+    const { isSelectedClient } = props;
 
     return (
         <div className="container">
             <Sidebar/>
             {
-                id ?
+                isSelectedClient ?
                     <ClientDetails/>
                     : <NoClient/>
             }
@@ -24,12 +26,12 @@ const Main = props => {
 }
 
 Main.propTypes = {
-    id: PropTypes.string
+    isSelectedClient: PropTypes.bool
 };
 
 const mapStateToProps = state => (
     {
-        id: state.selectedClient.id
+        isSelectedClient: getIsSelectedClient(state)
     }
 );
 

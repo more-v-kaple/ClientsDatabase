@@ -6,6 +6,8 @@ import { selectClient as onSelectClient } from 'Redux/actionCreators';
 
 import fetchClientsMiddleware from 'Redux/middlewares/fetchClientsMiddleware';
 
+import { getFilteredClients } from 'Redux/selectors';
+
 import './clientsList.scss';
 
 import ClientCard from './components/ClientCard';
@@ -70,10 +72,14 @@ ClientsList.propTypes = {
     id: PropTypes.string
 };
 
-const mapStateToProps = state => ({
-    list: state.filteredClients,
-    id: state.selectedClient.id
-});
+const mapStateToProps = state => {
+    const { filteredClients: list, id } = getFilteredClients(state);
+
+    return {
+        list,
+        id
+    }
+};
 
 const mapDispatchToProps = dispatch => ({
     selectClient: id => dispatch(onSelectClient(id)),

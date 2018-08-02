@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import getClientInfoSelector from 'Redux/selectors';
+import { getClientInfoSelector } from 'Redux/selectors';
 
 import './clientDetails.scss';
 
